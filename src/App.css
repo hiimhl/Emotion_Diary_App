@@ -1,3 +1,68 @@
+/* 구글 폰트 - 연성, 나눔 펜 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+:root {
+  /* font */
+  --nanum-font: "Nanum Pen Script";
+  --yeon-sung-font: "Yeon Sung";
+}
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--nanum-font);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* desktop */
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+/* mobile */
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .App {
-  padding: 20px;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+/* MyButton */
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+
+  /* 글자가 한줄로 나오도록 */
+  white-space: nowrap;
+  font-family: var(--nanum-font);
+}
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+.MyButton_positive {
+  background-color: #64c964;
+  color: white;
+}
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
 }
