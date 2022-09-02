@@ -1,12 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useReducer, useRef } from "react";
+import React, { useContext, useReducer, useRef } from "react";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
 import Diary from "./pages/Diary";
-import MyButton from "./components/MyButton";
-import MyHeader from "./components/MyHeader";
 
 const reducer = (state, action) => {
   let newState = [];
@@ -40,8 +38,47 @@ const reducer = (state, action) => {
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
+const dummyData = [
+  {
+    id: 1,
+    emotion: 1,
+    content: "오늘의 일기 1",
+    date: 1662117800481,
+  },
+  {
+    id: 2,
+    emotion: 2,
+    content: "오늘의 일기 2",
+    date: 1662117800486,
+  },
+  {
+    id: 3,
+    emotion: 3,
+    content: "오늘의 일기 3",
+    date: 1662117800415,
+  },
+  {
+    id: 4,
+    emotion: 4,
+    content: "오늘의 일기 4",
+    date: 1662117801567,
+  },
+  {
+    id: 5,
+    emotion: 5,
+    content: "오늘의 일기 5",
+    date: 1662117885649,
+  },
+  {
+    id: 6,
+    emotion: 6,
+    content: "오늘의 일기 6",
+    date: 1665117885649,
+  },
+];
+
 function App() {
-  const [data, dispatch] = useReducer(reducer, []);
+  const [data, dispatch] = useReducer(reducer, dummyData);
   const dataId = useRef(0);
 
   // CREAT
