@@ -1,7 +1,9 @@
 import { useState } from "react";
 import MyButton from "./MyButton";
 import { useNavigate } from "react-router-dom";
+import DiaryItem from "./DiaryItem";
 
+// Filter Option List
 const sortOptionList = [
   { value: "latest", name: "최신순" },
   { value: "oldest", name: "오래된 순" },
@@ -13,6 +15,7 @@ const filterOption = [
   { value: "bad", name: "안좋은 감정만" },
 ];
 
+// Select tag Component
 function ControlMenu({ value, onChange, optionList }) {
   return (
     <select
@@ -88,9 +91,7 @@ function DiaryList(props) {
       </div>
 
       {getProcessedDiaryList().map((it) => (
-        <div key={it.id}>
-          {it.content} {it.emotion}
-        </div>
+        <DiaryItem key={it.id} {...it} />
       ))}
     </div>
   );
