@@ -13,10 +13,7 @@ const reducer = (state, action) => {
       return action.data;
     }
     case "CREATE": {
-      const newItem = {
-        ...action.data,
-      };
-      newItem = [newItem, ...state];
+      newState = [action.data, ...state];
       break;
     }
     case "REMOVE": {

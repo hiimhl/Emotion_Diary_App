@@ -1,6 +1,11 @@
-//
+import DiaryEditor from "../components/DiaryEditor";
+
 function New() {
-  return <div className="New">new</div>;
+  return (
+    <div>
+      <DiaryEditor />
+    </div>
+  );
 }
 
 export default New;

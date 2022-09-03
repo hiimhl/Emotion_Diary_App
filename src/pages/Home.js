@@ -35,10 +35,6 @@ function Home() {
     }
   }, [diaryList, curDate]);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   // MyButton
   const increaseMonth = () => {
     setCurDate(
