@@ -8,40 +8,10 @@ import Diary from "./pages/Diary";
 
 const dummyList = [
   {
-    id: 1,
-    emotion: 1,
-    content: "오늘의 일기 1",
-    date: 1662117800481,
-  },
-  {
-    id: 2,
-    emotion: 2,
-    content: "오늘의 일기 2",
-    date: 1662117800486,
-  },
-  {
-    id: 3,
+    id: 0,
     emotion: 3,
-    content: "오늘의 일기 3",
-    date: 1662117800495,
-  },
-  {
-    id: 4,
-    emotion: 4,
-    content: "오늘의 일기 4",
-    date: 1662117801567,
-  },
-  {
-    id: 5,
-    emotion: 5,
-    content: "오늘의 일기 5",
-    date: 1662117885649,
-  },
-  {
-    id: 6,
-    emotion: 6,
-    content: "오늘의 일기 6",
-    date: 1665117885649,
+    content: "🎉오늘의 일기를 작성해주세요!🎉",
+    date: 1662117800481,
   },
 ];
 
@@ -76,7 +46,7 @@ export const DiaryDispatchContext = React.createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyList);
-  const dataId = useRef(0);
+  const dataId = useRef(1); //dummy data의 id와 겹치지 않도록 조심.
 
   // CREAT
   const onCreate = (date, content, emotion) => {

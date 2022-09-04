@@ -25,8 +25,12 @@ function Home() {
         //해당 달 + 1 해서 다음달로 넘기고 일은 0일
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        0
+        0,
+        23,
+        59,
+        59 // 날, 시간, 분, 초
       ).getTime();
+      //시간을 사용할 때는 시, 분, 초까지 영향을 미치기 때문에 잘 확인할 것.
 
       //해당 달에 있는 일기만 출력되도록 필터링함.
       setData(
