@@ -1,3 +1,5 @@
+import React from "react";
+
 function EmotionItem({
   emotion_id,
   emotion_img,
@@ -20,4 +22,6 @@ function EmotionItem({
   );
 }
 
-export default EmotionItem;
+export default React.memo(EmotionItem);
+//prop으로 onClick같은 Fn이 오면 자동으로 랜더링됨??
+//그래서 onClick을 따로 또 memo해줘야함.

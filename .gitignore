@@ -25,3 +25,6 @@ yarn-error.log*
 practice.html
 /src/prac
 prac.js
+
+/src/components/prac
+index.css

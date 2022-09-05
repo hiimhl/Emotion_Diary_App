@@ -7,7 +7,9 @@ function MyButton(props) {
 
   return (
     <button
-      className={["MyButton", `MyButton_${btnType}`].join(" ")}
+      className={["MyButton", `MyButton_${btnType}`, `${props.className}`].join(
+        " "
+      )}
       onClick={props.onClick}
     >
       {props.text}

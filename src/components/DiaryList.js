@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MyButton from "./MyButton";
 import { useNavigate } from "react-router-dom";
 import DiaryItem from "./DiaryItem";
@@ -16,7 +16,10 @@ const filterOption = [
 ];
 
 // Select tag Component
-function ControlMenu({ value, onChange, optionList }) {
+const ControlMenu = React.memo(({ value, onChange, optionList }) => {
+  useEffect(() => {
+    console.log("render");
+  }, []);
   return (
     <select
       className="ControlMenu"
@@ -30,7 +33,7 @@ function ControlMenu({ value, onChange, optionList }) {
       ))}
     </select>
   );
-}
+});
 
 function DiaryList(props) {
   const navigate = useNavigate();
