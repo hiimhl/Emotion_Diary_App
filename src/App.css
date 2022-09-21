@@ -53,6 +53,13 @@ body {
     top: 0;
   }
 
+  .Home > header .head_text {
+    font-size: 29px;
+  }
+  .DiaryPage > header .head_text {
+    font-size: 29px;
+  }
+
   .DiaryList .menu_wrapper {
     position: sticky;
     top: 100px;
@@ -63,15 +70,20 @@ body {
   .DiaryList .left_col .ControlMenu {
     width: 100px;
     padding: 0;
-    height: 41px;
+    height: 45px;
     text-align-last: center;
     text-align: center;
     -ms-text-align-last: center;
     -moz-text-align-last: center;
+    font-size: 22px;
   }
 
+  .DiaryList .right_col .MyButton {
+    font-size: 22px;
+  }
   .DiaryList ul {
     height: 80vh;
+    margin-top: 15px;
     overflow-y: scroll;
   }
 
@@ -104,6 +116,10 @@ body {
   /* diary */
   .DiaryPage .MyButton {
     padding: 10px 10px;
+  }
+
+  .DiaryPage > article > section > h4 {
+    font-size: 27px;
   }
 }
 

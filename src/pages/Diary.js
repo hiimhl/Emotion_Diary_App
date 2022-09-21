@@ -45,7 +45,7 @@ function Diary() {
     return (
       <div className="DiaryPage">
         <MyHeader
-          headText={`${getStringDate(new Date(data.date))} 일기`}
+          headText={`${getStringDate(new Date(data.date))}`}
           leftChild={
             <MyButton text={"< 뒤로가기"} onClick={() => navigate(-1)} />
           }
