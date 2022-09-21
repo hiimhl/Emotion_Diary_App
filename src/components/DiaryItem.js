@@ -29,8 +29,11 @@ function DiaryItem({ id, emotion, content, date }) {
 
   return (
     <div className="DiaryItem">
-      <div className={`emotion_img_wrapper emotion_img_wrapper_${emotion}`}>
-        <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} />
+      <div
+        onClick={goDetail}
+        className={`emotion_img_wrapper emotion_img_wrapper_${emotion}`}
+      >
+        <img src={process.env.PUBLIC_URL + `/assets/emotion${emotion}.png`} />
       </div>
       <div className="info_wrapper" onClick={goDetail}>
         <span className="diary_date">{strDate}</span>

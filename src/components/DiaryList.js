@@ -67,7 +67,7 @@ function DiaryList(props) {
   };
 
   return (
-    <div className="DiaryList">
+    <section className="DiaryList">
       <div className="menu_wrapper">
         <div className="left_col">
           <ControlMenu
@@ -89,11 +89,12 @@ function DiaryList(props) {
           />
         </div>
       </div>
-
-      {getProcessedDiaryList().map((it) => (
-        <DiaryItem key={it.id} {...it} />
-      ))}
-    </div>
+      <ul>
+        {getProcessedDiaryList().map((it) => (
+          <DiaryItem key={it.id} {...it} />
+        ))}
+      </ul>
+    </section>
   );
 }
 

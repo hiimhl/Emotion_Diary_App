@@ -35,10 +35,75 @@ body {
   }
 }
 
-/* mobile */
 @media (max-width: 650px) {
   .App {
     width: 90vw;
+  }
+}
+
+/* mobile */
+@media (max-width: 375px) {
+  .App {
+    width: 90vw;
+  }
+
+  /* home - header, select  */
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  .DiaryList .menu_wrapper {
+    position: sticky;
+    top: 100px;
+  }
+  .DiaryList .left_col {
+    display: flex;
+  }
+  .DiaryList .left_col .ControlMenu {
+    width: 100px;
+    padding: 0;
+    height: 41px;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+  }
+
+  .DiaryList ul {
+    height: 80vh;
+    overflow-y: scroll;
+  }
+
+  /* scrollbar - 투명 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* DiaryItem -item list */
+
+  .DiaryItem .emotion_img_wrapper {
+    max-width: 80px;
+  }
+
+  .DiaryItem .info_wrapper .diary_date {
+    font-size: 23px;
+  }
+  .DiaryItem .info_wrapper .diary_content_preview {
+    font-size: 19px;
+    width: 140px;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+  .DiaryItem .MyButton {
+    padding: 10px 10px;
+  }
+
+  /* diary */
+  .DiaryPage .MyButton {
+    padding: 10px 10px;
   }
 }
 
@@ -111,6 +176,11 @@ header button {
 }
 
 /* DiaryList */
+.DiaryList ul {
+  list-style: none;
+  padding: 0;
+}
+
 .DiaryList .menu_wrapper {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -151,7 +221,7 @@ header button {
 
 .DiaryItem .emotion_img_wrapper {
   cursor: pointer;
-  min-width: 120px;
+  width: 120px;
   height: 80px;
   border-radius: 5px;
   display: flex;
