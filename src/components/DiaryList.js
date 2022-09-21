@@ -17,9 +17,6 @@ const filterOption = [
 
 // Select tag Component
 const ControlMenu = React.memo(({ value, onChange, optionList }) => {
-  useEffect(() => {
-    console.log("render");
-  }, []);
   return (
     <select
       className="ControlMenu"

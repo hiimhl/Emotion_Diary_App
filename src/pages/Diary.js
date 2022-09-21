@@ -14,6 +14,12 @@ function Diary() {
   const [data, setData] = useState();
 
   useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    // head tag안에 있는 title
+    titleElement.innerHTML = `감정 일기장 - ${id}번 일기`;
+  }, []);
+
+  useEffect(() => {
     if (diaryLsit.length >= 1) {
       const targetDiary = diaryLsit.find(
         (it) => parseInt(it.id) === parseInt(id)
